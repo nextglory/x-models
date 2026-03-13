@@ -1,0 +1,36 @@
+# Environment
+.env
+.env.test
+
+# Models
+whisper-models/*.pt
+
+# Audio files
+audio/*.mp3
+audio/*.wav
+audio/*.json
+audio/*.srt
+audio/*.tsv
+audio/*.txt
+audio/*.vtt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

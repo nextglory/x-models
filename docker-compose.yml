@@ -1,0 +1,21 @@
+services:
+  whisper:
+    build:
+      context: .
+      args:
+        DEVICE: ${DEVICE:-cpu}
+    env_file:
+      - .env
+    volumes:
+      - ./audio:/data
+      - ./whisper-models:/root/.cache/whisper
+    command: ${AUDIO_FILE:-audio.mp3} --model ${MODEL}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    profiles:
+      - gpu
