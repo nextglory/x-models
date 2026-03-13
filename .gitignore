@@ -3,7 +3,9 @@
 .env.test
 
 # Models
-whisper-models/*.pt
+whisper-models/small.pt
+whisper-models/medium.pt
+whisper-models/large*.pt
 
 # Audio files
 audio/*.mp3
